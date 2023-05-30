@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-    <SliderCarousel :imagesList="jumboImages" :imagesWidth="[35, 13]"/>
+    <SliderCarousel :bgAnimationDuration="50" bgImage="../src/assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]" :autoplay="true" :autoplayDelay="4" :animationDuration="1"/>
 </template>
 
 <style lang="scss" scoped></style>

@@ -3,7 +3,12 @@ export default {
     name: "SliderCarousel",
     props: {
         imagesList: Array,
-        imagesWidth: Array
+        imagesWidth: Array,
+        autoplayDelay: Number,
+        animationDuration: Number,
+        autoplay: Boolean,
+        bgImage: String,
+        bgAnimationDuration: Number
     },
     data() {
         return {
@@ -35,9 +40,11 @@ export default {
             }
         },
         startAutoSlider() {
-            this.autoSlider = setInterval(() => {
-                this.next();
-            }, 1000 * 5);
+            if(this.autoplay && this.autoplayDelay){
+                this.autoSlider = setInterval(() => {
+                    this.next();
+                }, 1000 * this.autoplayDelay);
+            }
         },
         stopAutoSlider() {
             clearInterval(this.autoSlider);
@@ -54,7 +61,7 @@ export default {
 </script>
 
 <template>
-    <div class="position-relative">
+    <div class="position-relative overflow-hidden">
         <button class="my-rotateLeft position-absolute top-50 start-0" @click="prev(); resetAutoSlider()">
             <strong>PREV</strong>
         </button>
@@ -62,11 +69,17 @@ export default {
             <strong>NEXT</strong>
         </button>
 
+        <div class="my-bgSlider d-flex" :style="`animation-duration: ${bgAnimationDuration}s`">
+            <img :src="bgImage" alt="background_slider">
+            <img :src="bgImage" alt="background_slider">
+        </div>
+
         <transition-group :name="animationName" tag="div" class="my-carousel">
             <div v-for="(images, index) in imagesList" :key="index" v-show="index === currentIndex"
-                class="my-carousel-item h-100 w-100" @animationend="isAnimating = false">
+                class="my-carousel-item h-100 w-100" @animationend="isAnimating = false"
+                :style="`animation-duration: ${animationDuration}s`">
 
-                <img class="mt-5" v-for="(image, i) in images" :src="image" :style="`width: ${imagesWidth[i]}%`" />
+                <img class="mt-5" v-for="(image, i) in images" :src="image" :style="`width: ${imagesWidth[i]}%; animation-duration: ${animationDuration}s;`" />
 
             </div>
         </transition-group>
@@ -103,11 +116,30 @@ button {
 .my-carousel {
     position: relative;
     width: 100%;
-    background-image: url("../src/assets/img/cielostellato.PNG");
-    background-size: cover;
-    background-position: bottom;
+    // background-image: url("../src/assets/img/cielostellato.PNG");
+    // background-size: cover;
+    // background-position: bottom;
     height: 620px;
     overflow: hidden;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.my-bgSlider{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    overflow: hidden;
+    height: 100%;
+    animation: scroll linear infinite;
+    img{
+        width: 100vw;
+        object-position: bottom;
+        object-fit: cover;
+    }
 }
 
 .my-carousel-item {
@@ -141,17 +173,6 @@ button {
 
     100% {
         transform: translate(-50%, -50%);
-    }
-}
-
-.slide-right-enter-active,
-.slide-right-leave-active,
-.slide-left-enter-active,
-.slide-left-leave-active {
-    animation-duration: 1s;
-
-    img {
-        animation-duration: 1s;
     }
 }
 
