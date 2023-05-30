@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+*{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.my-orangeBtn{
+  background-color: #d2401e;
+  color: white;
+  padding: .7rem 1.5rem;
+  border: none;
+  transition: background-color .2s;
+
+  &:hover{
+    background-color: #aa3318;
+  }
+}
+
+.my-container{
+  margin: auto;
+  max-width: 1080px;
+}
+
+/* DEBUG CLASS */
+.my-block{
+  border: 2px dotted crimson;
+  background-color: rgba(153, 205, 50, 0.2);
+  min-width: 100px;
+  min-height: 100px;
+}

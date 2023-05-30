@@ -22,7 +22,18 @@ export default {
 </script>
 
 <template>
-  <PageHeader />
+  <PageHeader 
+    textButton=     "ORDER ONLINE"
+    :middleNavList= "[['HOME', '../src/assets/svg/svg-0.svg'],
+                      'PAGES',
+                      'MENU',
+                      'EVENT',
+                      'BLOG',
+                      'LANDING']"
+    :sideNavList=   "[['CART', '../src/assets/svg/svg-1.svg']]"
+    logoPath="../src/assets/img/h5-logo-divided-header.png"
+    :headerHeight="130"
+  />
   <PageMain />
   <PageFooter />
 </template>
