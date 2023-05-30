@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: "Searchbar",
+    name: "SearchBar",
     props: {
         placeholder: String,
         imgPath: String
@@ -11,7 +11,7 @@ export default {
         }
     },
     mounted() {
-        // console.log("Caricato il componente 'Searchbar'.");
+        // console.log("Caricato il componente 'SearchBar'.");
     }
 }
 </script>

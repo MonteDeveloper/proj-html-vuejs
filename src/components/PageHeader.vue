@@ -41,7 +41,7 @@ export default {
 }
 </script>
 <template>
-    <header class="fixed-top bg-dark" :class="{ 'my-headerScrolled': !isOnTopPage }" :style="`height:${headerHeight}px`">
+    <header class="fixed-top" :class="{ 'my-headerScrolled': !isOnTopPage }" :style="`height:${headerHeight}px`">
         <div class="my-container d-flex justify-content-between align-items-center p-3 h-100">
             <!-- LEFT SIDE-->
             <button v-if="textButton" class="my-orangeBtn">{{ textButton }}</button>
