@@ -116,9 +116,6 @@ button {
 .my-carousel {
     position: relative;
     width: 100%;
-    // background-image: url("../src/assets/img/cielostellato.PNG");
-    // background-size: cover;
-    // background-position: bottom;
     height: 620px;
     overflow: hidden;
 }
@@ -159,20 +156,24 @@ button {
 @keyframes slideRight {
     0% {
         transform: translate(150%, -50%);
+        opacity: 0;
     }
 
     100% {
         transform: translate(-50%, -50%);
+        opacity: 1;
     }
 }
 
 @keyframes slideLeft {
     0% {
         transform: translate(-150%, -50%);
+        opacity: 0;
     }
 
     100% {
         transform: translate(-50%, -50%);
+        opacity: 1;
     }
 }
 

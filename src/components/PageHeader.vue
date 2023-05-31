@@ -66,9 +66,10 @@ export default {
 header {
     transition: background-color .4s;
     font-size: .8em;
+}
 
-    .my-headerScrolled {
-        background-color: #212529;
-    }
+.my-headerScrolled {
+    background-color: #212529e1;
+    backdrop-filter: blur(10px);
 }
 </style>
