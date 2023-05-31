@@ -59,6 +59,10 @@ export default {
             transition-delay: .5s;
             opacity: 1;
         }
+
+        img.my-hovered{
+            opacity: .4;
+        }
     }
 
     .fa-eye {

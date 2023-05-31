@@ -94,12 +94,12 @@ export default {
 
             </div>
             <div v-else v-for="(textGroup, index) in textList" :key="`txt-${index}`" v-show="index === currentIndex"
-                class="my-carousel-item h-100 w-100" @animationend="isAnimating = false"
+                class="my-carousel-item h-100 w-100 px-5" @animationend="isAnimating = false"
                 :style="`animation-duration: ${animationDuration}s`">
 
                 <div class="d-flex justify-content-center align-items-center h-100" :style="`margin-top: ${offsetY}rem`">
                     <div class="text-center">
-                        <p v-for="paragraph in textGroup" :style="`color: ${paragraph.color}; font-size: ${paragraph.fs}rem; margin-bottom: ${paragraph.mb}rem; padding: 0 ${paragraph.px}rem;`">
+                        <p v-for="paragraph in textGroup" :style="`color: ${paragraph.color}; font-size: ${paragraph.fs}rem; margin-bottom: ${paragraph.mb}rem; max-width: ${paragraph.maxWidth}px;`">
                             {{paragraph.text}}<br>
                         </p>
                     </div>
