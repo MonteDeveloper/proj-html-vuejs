@@ -2,13 +2,15 @@
 import SliderCarousel from './SliderCarousel.vue'
 import CardViewMore from './CardViewMore.vue'
 import CardPerson from './CardPerson.vue'
+import CardListBar from './CardListBar.vue'
 
 export default {
     name: "PageMain",
     components: {
         SliderCarousel,
         CardViewMore,
-        CardPerson
+        CardPerson,
+        CardListBar
     },
     data() {
         return {
@@ -26,7 +28,7 @@ export default {
                     "../src/assets/img/h3-rev-img-6.png"
                 ]
             ],
-            CardViewMoreDataList: [
+            cardViewMoreDataList: [
                 "../src/assets/img/h3-img-1.jpg",
                 "../src/assets/img/h3-img-2.jpg",
                 "../src/assets/img/h3-img-3.jpg",
@@ -143,7 +145,7 @@ export default {
                     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iusto facere, eveniet temporibus."
                 }
             ],
-            CardPersonDataList: [
+            cardPersonDataList: [
                 {
                     imgPath: "../src/assets/img/h1-team-1a-700x700.jpg",
                     name: "JANE SMITH",
@@ -155,16 +157,141 @@ export default {
                     description: "Dough Maker"
                 },
                 {
-                    imgPath: "../src/assets/img/h1-team-3a.jpg",
+                    imgPath: "../src/assets/img/h1-team-4a.jpg",
                     name: "FANK BALEY",
                     description: "Kitchen Porter"
                 },
                 {
-                    imgPath: "../src/assets/img/h1-team-4a.jpg",
+                    imgPath: "../src/assets/img/h1-team-3a.jpg",
                     name: "EMILY JONES",
                     description: "Waitress"
                 }
-            ]
+            ],
+            partnerLogoDataList: [
+                "../src/assets/img/h1-clients-img-1.png",
+                "../src/assets/img/h1-clients-img-2.png",
+                "../src/assets/img/h1-clients-img-3.png",
+                "../src/assets/img/h1-clients-img-4.png",
+                "../src/assets/img/h1-clients-img-5.png",
+            ],
+            cardPizzaData: {
+                imgPathList: [
+                    "../src/assets/img/h3-product-img-1a-100x100.png",
+                    "../src/assets/img/h3-product-img-2a-150x150.png",
+                    "../src/assets/img/h3-product-img-3a-150x150.png",
+                    "../src/assets/img/h3-product-img-4a-150x150.png",
+                    "../src/assets/img/h3-product-img-5a-150x150.png",
+                    "../src/assets/img/h3-product-img-6a-100x100.png",
+                ],
+                textList: [
+                    {
+                        circleText: "SOLD",
+                        cardText: [
+                            [
+                                {
+                                    text: "BISMARK",
+                                    classList: "my-pizzaCardTitle"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "$25.00",
+                                    classList: "my-discountPriceText"
+                                },
+                                {
+                                    text: "$30.00",
+                                    classList: "my-priceText"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        circleText: "",
+                        cardText: [
+                            [
+                                {
+                                    text: "FIORI DI ZUCCA",
+                                    classList: "my-pizzaCardTitle"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "$7.00 - $50.00",
+                                    classList: "my-priceText"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        circleText: "",
+                        cardText: [
+                            [
+                                {
+                                    text: "VALDOSTANA",
+                                    classList: "my-pizzaCardTitle"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "$55.00",
+                                    classList: "my-priceText"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        circleText: "",
+                        cardText: [
+                            [
+                                {
+                                    text: "PIZZA TARTUFATA",
+                                    classList: "my-pizzaCardTitle"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "$45.00",
+                                    classList: "my-priceText"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        circleText: "",
+                        cardText: [
+                            [
+                                {
+                                    text: "FRANCESCANA",
+                                    classList: "my-pizzaCardTitle"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "$25.00",
+                                    classList: "my-priceText"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        circleText: "",
+                        cardText: [
+                            [
+                                {
+                                    text: "CAMPAGNOLA",
+                                    classList: "my-pizzaCardTitle"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "$50.00 - $95.00",
+                                    classList: "my-priceText"
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
         }
     },
     mounted() {
@@ -178,15 +305,15 @@ export default {
         <!-- JUMBO -->
         <section>
             <SliderCarousel :offsetY="2" :dotPosition="false" style="height: 620px;" :bgAnimationDuration="50"
-                bgImage="../src/assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]" :autoplay="true"
-                :autoplayDelay="4" :animationDuration="1" />
+                bgImage="../src/assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]"
+                :autoplay="true" :autoplayDelay="4" :animationDuration="1" />
         </section>
 
         <!-- CARD VIEWMORE -->
         <section>
             <div class="d-flex gap-2">
-                <div v-for="CardViewMoreData in CardViewMoreDataList" class="flex-fill">
-                    <CardViewMore :imgPath="CardViewMoreData" />
+                <div v-for="cardViewMoreData in cardViewMoreDataList" class="flex-fill">
+                    <CardViewMore :imgPath="cardViewMoreData" />
                 </div>
             </div>
         </section>
@@ -211,7 +338,8 @@ export default {
                     <div class="col-lg-10 col-xxl-6">
                         <h2 class="h1">SPECIALS*</h2>
                         <p class="text-secondary">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iusto facere, eveniet temporibus.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iusto facere, eveniet
+                            temporibus.
                         </p>
                         <ul class="list-unstyled">
                             <li v-for="specialText in specialListText" class="mb-3">
@@ -236,7 +364,7 @@ export default {
             <div class="my-goAhedBg bg-danger">
                 <div class="my-container d-flex align-items-center h-100">
                     <p class="h1 text-white">
-                        GO AHED AND <br> 
+                        GO AHED AND <br>
                         BUILD YOUR <br>
                         OWN PIZZA <br>
                         WE WON'T <br>
@@ -249,28 +377,59 @@ export default {
         <!-- CARD PERSON -->
         <section>
             <div class="d-flex">
-                <div v-for="CardPersonData in CardPersonDataList" class="col-3">
-                    <CardPerson :imgPath="CardPersonData.imgPath" :name="CardPersonData.name" :description="CardPersonData.description" :cardBackColor="'#d2401e'"/>
+                <div v-for="cardPersonData in cardPersonDataList" class="col-3">
+                    <CardPerson :imgPath="cardPersonData.imgPath" :name="cardPersonData.name"
+                        :description="cardPersonData.description" :cardBackColor="'#d2401e'" />
                 </div>
             </div>
+        </section>
+
+        <!-- LOGO PARTNER LIST -->
+        <section class="my-darkerWhiteBg py-5">
+            <div class="my-container">
+                <CardListBar :imgPathList="partnerLogoDataList" :isAnimated="false" />
+            </div>
+        </section>
+
+        <!-- PIZZA MENU LIST -->
+        <section>
+            <div class="d-flex justify-content-center">
+                <div class="text-center px-2 py-5 my-maxWidth">
+                    <p class="text-danger">CHOOSE YOUR FLAVOR</p>
+                    <h2 class="h1">THE BEST PIZZA MENU IN TOWN</h2>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, autem asperiores odio earum
+                        sequi quam nisi repellendus id accusantium! Repudiandae, id atque.
+                    </p>
+                </div>
+            </div>
+            <CardListBar :imgPathList="cardPizzaData.imgPathList" :textList="cardPizzaData.textList" :isAnimated="true" :cardImgPx="2"/>
         </section>
     </div>
 </template>
 
 <style lang="scss" scoped>
+
+.my-darkerWhiteBg{
+    background-color: #f7f7f2;
+}
 .my-reviewBg {
     background-image: url("../src/assets/img/h3-testimonials-bckgrnd.jpg");
     background-size: contain;
 }
 
-.my-goAhedBg{
+.my-maxWidth {
+    max-width: 700px;
+}
+
+.my-goAhedBg {
     height: 450px;
     background-image: url(../assets/img/h3-background-img-duplicated.jpg);
     background-size: 150%;
     background-position: center;
     background-attachment: fixed;
-    
-    .my-container{
+
+    .my-container {
 
         padding: 0 10rem;
     }

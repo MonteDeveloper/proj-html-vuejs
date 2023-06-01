@@ -25,12 +25,12 @@ export default {
 
     </div> -->
     <div class="my-card position-relative overflow-hidden">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
+        <div class="my-flip-card">
+            <div class="my-flip-card-inner">
+                <div class="my-flip-card-front">
                     <img class="img-fluid" :src="imgPath" alt="CardPerson-img">
                 </div>
-                <div class="flip-card-back d-flex flex-column justify-content-center" :style="`background-color: ${cardBackColor}`">
+                <div class="my-flip-card-back d-flex flex-column justify-content-center" :style="`background-color: ${cardBackColor}`">
                     <h3>{{ name }}</h3>
                     <p>{{ description }}</p>
                     <div class="d-flex justify-content-center">
@@ -48,51 +48,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// .my-card {
-//     SquarePatternBackground{
-//         border: 2px solid crimson;
-//     }
-//     img {
-//         object-fit: cover;
-//         transition: opacity .2s, scale .2s;
-//         opacity: 1;
-//         scale: 1;
-//     }
-
-//     img.my-hovered{
-//         z-index: -1;
-//         width: 150%;
-//     }
-
-//     .my-hovered {
-//         transition: opacity .2s;
-//         opacity: 0;
-//     }
-
-//     &:hover {
-//         cursor: pointer;
-
-//         img {
-//             transition-delay: .5s;
-//             opacity: 0;
-//             scale: 1.2;
-//         }
-
-//         .my-hovered {
-//             transition-delay: .5s;
-//             opacity: 1;
-//         }
-
-//         img.my-hovered{
-//             opacity: .4;
-//         }
-//     }
-
-//     .fa-eye {
-//         background-color: #d2401e;
-//     }
-// }
-
 .my-card{
     & > img{
         z-index: -1;
@@ -100,13 +55,13 @@ export default {
     }
 }
 
-.flip-card {
+.my-flip-card {
     background-color: transparent;
     aspect-ratio: 1/1;
     perspective: 1000px;
 }
 
-.flip-card-inner {
+.my-flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -116,13 +71,13 @@ export default {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.flip-card:hover .flip-card-inner {
+.my-flip-card:hover .my-flip-card-inner {
     transition-delay: 1s;
     transform: rotateY(180deg) scale(.9);
 }
 
-.flip-card-front,
-.flip-card-back {
+.my-flip-card-front,
+.my-flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -130,7 +85,7 @@ export default {
     backface-visibility: hidden;
 }
 
-.flip-card-back {
+.my-flip-card-back {
     color: white;
     transform: rotateY(180deg);
 }
