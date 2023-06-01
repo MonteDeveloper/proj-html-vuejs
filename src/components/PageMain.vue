@@ -420,48 +420,106 @@ export default {
                     </p>
                 </div>
             </div>
-            <CardListBar :imgPathList="cardPizzaData.imgPathList" :textList="cardPizzaData.textList" :isAnimated="true"
-                :cardImgPx="2" />
+            <CardListBar class="pb-5" :imgPathList="cardPizzaData.imgPathList" :textList="cardPizzaData.textList"
+                :isAnimated="true" :cardImgPx="2" />
         </section>
 
         <!-- DELISH PIZZA DEALS DATES -->
-        <div class="d-flex flex-wrap">
-            <div class="my-bgStars col-12 col-md-6 p-5 text-white d-flex justify-content-center align-items-center">
-                <div class="my-maxWidth">
-                    <p class="text-danger m-0">MADE WITH LOVE</p>
-                    <h2 class="h1 mb-5">DELISH PIZZA DEALS</h2>
-                    <ul class="list-unstyled">
-                        <li v-for="delishPizzaText in delishPizzaListText" class="mb-3">
-                            <div class="d-flex gap-4">
-                                <div class="text-center">
-                                    <p class="text-danger h1 m-0">{{ delishPizzaText.pointText[0] }}</p>
-                                    <p class="fs-5 m-0">{{ delishPizzaText.pointText[1] }}</p>
+        <section>
+            <div class="d-flex flex-wrap">
+                <div class="my-bgStars col-12 col-md-6 p-5 text-white d-flex justify-content-center align-items-center">
+                    <div class="my-maxWidth">
+                        <p class="text-danger m-0">MADE WITH LOVE</p>
+                        <h2 class="h1 mb-5">DELISH PIZZA DEALS</h2>
+                        <ul class="list-unstyled">
+                            <li v-for="delishPizzaText in delishPizzaListText" class="mb-3">
+                                <div class="d-flex gap-4">
+                                    <div class="text-center">
+                                        <p class="text-danger h1 m-0">{{ delishPizzaText.pointText[0] }}</p>
+                                        <p class="fs-5 m-0">{{ delishPizzaText.pointText[1] }}</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-4 m-0">{{ delishPizzaText.title }}</p>
+                                        <p class="text-danger m-0">{{ delishPizzaText.position }}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p class="fs-4 m-0">{{ delishPizzaText.title }}</p>
-                                    <p class="text-danger m-0">{{ delishPizzaText.position }}</p>
-                                </div>
-                            </div>
-                            <hr class="my-hr mt-4">
-                        </li>
-                    </ul>
+                                <hr class="my-hr mt-4">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 overflow-hidden">
+                    <img class="object-fit-cover" src="../assets/img/h3-img-5a.jpg" alt="">
                 </div>
             </div>
-            <div class="col-12 col-md-6 overflow-hidden">
-                <img class="object-fit-cover" src="../assets/img/h3-img-5a.jpg" alt="">
+        </section>
+
+        <!-- FORM BOOK TABLE -->
+        <section>
+            <div class="my-form py-5 text-white">
+                <div class="my-container d-flex justify-content-center align-items-center gap-3 my-5">
+                    <select class="text-secondary" name="personNumber" id="personNumberSelect">
+                        <option value="">1 Person</option>
+                    </select>
+                    <span>FOR</span>
+                    <input class="text-secondary" type="date" name="dateInput" id="dateInput">
+                    <span>AT</span>
+                    <input class="text-secondary" type="time" name="timeInput" id="timeInput">
+                    <button class="my-orangeBtn">BOOK A TABLE</button>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.my-bgStars{
+.my-form {
+    background-image: url("../assets/img/h3-background-img-3.jpg");
+    background-size: cover;
+
+    input,
+    select {
+        padding: .5rem 2rem;
+        text-align: start;
+        border: 1px solid black;
+    }
+
+    button,
+    input,
+    select{
+        width: 200px;
+        height: 50px;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23bd994f" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right .5rem center;
+        background-size: 1em;
+    }
+
+    #dateInput::-webkit-calendar-picker-indicator {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bd994f" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+        background-repeat: no-repeat;
+    }
+
+    #timeInput::-webkit-calendar-picker-indicator {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23bd994f" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.25 13.46l-4.24-4.24V7h1.5v3.67l3.74 3.74-1.06 1.06z" /> </svg> ');
+    }
+}
+
+.my-bgStars {
     background-image: url("../assets/img/cielostellato.PNG");
     background-size: cover;
 }
-.my-hr{
+
+.my-hr {
     border: 1px dotted #b7903c;
 }
+
 .my-darkerWhiteBg {
     background-color: #f7f7f2;
 }
