@@ -1,12 +1,14 @@
 <script>
 import SliderCarousel from './SliderCarousel.vue'
 import CardViewMore from './CardViewMore.vue'
+import CardPerson from './CardPerson.vue'
 
 export default {
     name: "PageMain",
     components: {
         SliderCarousel,
-        CardViewMore
+        CardViewMore,
+        CardPerson
     },
     data() {
         return {
@@ -140,6 +142,28 @@ export default {
                     title: "COMBO GRANDE",
                     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iusto facere, eveniet temporibus."
                 }
+            ],
+            CardPersonDataList: [
+                {
+                    imgPath: "../src/assets/img/h1-team-1a-700x700.jpg",
+                    name: "JANE SMITH",
+                    description: "Pizza Chef"
+                },
+                {
+                    imgPath: "../src/assets/img/h1-team-2a.jpg",
+                    name: "SARAH JOHNSON",
+                    description: "Dough Maker"
+                },
+                {
+                    imgPath: "../src/assets/img/h1-team-3a.jpg",
+                    name: "FANK BALEY",
+                    description: "Kitchen Porter"
+                },
+                {
+                    imgPath: "../src/assets/img/h1-team-4a.jpg",
+                    name: "EMILY JONES",
+                    description: "Waitress"
+                }
             ]
         }
     },
@@ -158,7 +182,7 @@ export default {
                 :autoplayDelay="4" :animationDuration="1" />
         </section>
 
-        <!-- CARDVIEWMORE -->
+        <!-- CARD VIEWMORE -->
         <section>
             <div class="d-flex gap-2">
                 <div v-for="CardViewMoreData in CardViewMoreDataList" class="flex-fill">
@@ -218,6 +242,15 @@ export default {
                         WE WON'T <br>
                         JUDGE!
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARD PERSON -->
+        <section>
+            <div class="d-flex">
+                <div v-for="CardPersonData in CardPersonDataList" class="col-3">
+                    <CardPerson :imgPath="CardPersonData.imgPath" :name="CardPersonData.name" :description="CardPersonData.description" :cardBackColor="'#d2401e'"/>
                 </div>
             </div>
         </section>
