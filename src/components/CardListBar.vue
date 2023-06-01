@@ -58,15 +58,4 @@ export default {
     width: 200%;
     animation: scroll linear infinite 25s;
 }
-.my-card {
-    aspect-ratio: 1/1;
-    img{
-        object-fit: cover;
-        transition: scale .2s;
-        &:hover{
-            scale: .9;
-            cursor: pointer;
-        }
-    }
-}
 </style>

@@ -145,6 +145,23 @@ export default {
                     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iusto facere, eveniet temporibus."
                 }
             ],
+            delishPizzaListText: [
+                {
+                    pointText: ["02", "NOV"],
+                    title: "TRADITIONAL NAPOLITAN PIES IN KYOTO PIZZA MERCATO",
+                    position: "204 E. Pizzetta Tommaso"
+                },
+                {
+                    pointText: ["03", "NOV"],
+                    title: "TERARAZZA PATIO DINING SPACE OPENING THIS WEEKEND",
+                    position: "204 E. Pizzetta Tommaso"
+                },
+                {
+                    pointText: ["05", "NOV"],
+                    title: "SIENNA PRIVATE DINING ROOM WITH STEPHANE BRUNN",
+                    position: "204 E. Pizzetta Tommaso"
+                }
+            ],
             cardPersonDataList: [
                 {
                     imgPath: "../src/assets/img/h1-team-1a-700x700.jpg",
@@ -403,16 +420,52 @@ export default {
                     </p>
                 </div>
             </div>
-            <CardListBar :imgPathList="cardPizzaData.imgPathList" :textList="cardPizzaData.textList" :isAnimated="true" :cardImgPx="2"/>
+            <CardListBar :imgPathList="cardPizzaData.imgPathList" :textList="cardPizzaData.textList" :isAnimated="true"
+                :cardImgPx="2" />
         </section>
+
+        <!-- DELISH PIZZA DEALS DATES -->
+        <div class="d-flex flex-wrap">
+            <div class="my-bgStars col-12 col-md-6 p-5 text-white d-flex justify-content-center align-items-center">
+                <div class="my-maxWidth">
+                    <p class="text-danger m-0">MADE WITH LOVE</p>
+                    <h2 class="h1 mb-5">DELISH PIZZA DEALS</h2>
+                    <ul class="list-unstyled">
+                        <li v-for="delishPizzaText in delishPizzaListText" class="mb-3">
+                            <div class="d-flex gap-4">
+                                <div class="text-center">
+                                    <p class="text-danger h1 m-0">{{ delishPizzaText.pointText[0] }}</p>
+                                    <p class="fs-5 m-0">{{ delishPizzaText.pointText[1] }}</p>
+                                </div>
+                                <div>
+                                    <p class="fs-4 m-0">{{ delishPizzaText.title }}</p>
+                                    <p class="text-danger m-0">{{ delishPizzaText.position }}</p>
+                                </div>
+                            </div>
+                            <hr class="my-hr mt-4">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 overflow-hidden">
+                <img class="object-fit-cover" src="../assets/img/h3-img-5a.jpg" alt="">
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
-.my-darkerWhiteBg{
+.my-bgStars{
+    background-image: url("../assets/img/cielostellato.PNG");
+    background-size: cover;
+}
+.my-hr{
+    border: 1px dotted #b7903c;
+}
+.my-darkerWhiteBg {
     background-color: #f7f7f2;
 }
+
 .my-reviewBg {
     background-image: url("../src/assets/img/h3-testimonials-bckgrnd.jpg");
     background-size: contain;
