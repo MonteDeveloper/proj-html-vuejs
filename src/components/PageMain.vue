@@ -151,46 +151,76 @@ export default {
 
 <template>
     <div class="d-flex flex-column gap-2">
-        <SliderCarousel :offsetY="2" :dotPosition="false" style="height: 620px;" :bgAnimationDuration="50"
-            bgImage="../src/assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]" :autoplay="true"
-            :autoplayDelay="4" :animationDuration="1" />
-        <div class="d-flex gap-2">
-            <div v-for="CardViewMoreData in CardViewMoreDataList" class="flex-fill">
-                <CardViewMore :imgPath="CardViewMoreData" />
-            </div>
-        </div>
-        <div class="my-reviewBg">
-            <SliderCarousel :offsetY="-3" :dotPosition="true" style="height: 500px;" :textList="reviewSliderTextList"
-                :autoplay="false" :autoplayDelay="4" :animationDuration="1" />
-        </div>
-        <div class="d-flex">
-            <div class="col-6 position-relative">
-                <img class="img-fluid" src="../assets/img/h1-img-4.jpg" alt="bgImg-1">
-                <img class="img-fluid position-absolute start-50 top-50 translate-middle" src="../assets/img/h1-img-7n.png"
-                    alt="bgImg-1">
-            </div>
-            <div class="col-6 d-flex justify-content-center align-items-center">
-                <div class="w-50">
-                    <h2 class="h1">SPECIALS*</h2>
-                    <p class="text-secondary">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iusto facere, eveniet temporibus.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li v-for="specialText in specialListText" class="mb-3">
-                            <div class="d-flex gap-2">
-                                <div>
-                                    <span class="text-danger fs-4">{{ specialText.pointText }}</span>
-                                </div>
-                                <div>
-                                    <span class="fs-4">{{ specialText.title }}</span> <br>
-                                    <span class="text-secondary">{{ specialText.description }}</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+        <!-- JUMBO -->
+        <section>
+            <SliderCarousel :offsetY="2" :dotPosition="false" style="height: 620px;" :bgAnimationDuration="50"
+                bgImage="../src/assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]" :autoplay="true"
+                :autoplayDelay="4" :animationDuration="1" />
+        </section>
+
+        <!-- CARDVIEWMORE -->
+        <section>
+            <div class="d-flex gap-2">
+                <div v-for="CardViewMoreData in CardViewMoreDataList" class="flex-fill">
+                    <CardViewMore :imgPath="CardViewMoreData" />
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section>
+            <div class="my-reviewBg">
+                <SliderCarousel :offsetY="-3" :dotPosition="true" style="height: 500px;" :textList="reviewSliderTextList"
+                    :autoplay="false" :autoplayDelay="4" :animationDuration="1" />
+            </div>
+        </section>
+
+        <!-- SPECIALS* LIST -->
+        <section>
+            <div class="d-flex flex-wrap">
+                <div class="col-12 col-lg-6 position-relative overflow-hidden">
+                    <img class="h-100 w-100" src="../assets/img/h1-img-4.jpg" alt="bgImg-1">
+                    <img class="col-5 position-absolute start-50 top-50 translate-middle" src="../assets/img/h1-img-7n.png"
+                        alt="bgImg-1">
+                </div>
+                <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center py-5">
+                    <div class="col-lg-10 col-xxl-6">
+                        <h2 class="h1">SPECIALS*</h2>
+                        <p class="text-secondary">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iusto facere, eveniet temporibus.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li v-for="specialText in specialListText" class="mb-3">
+                                <div class="d-flex gap-2">
+                                    <div>
+                                        <span class="text-danger fs-4">{{ specialText.pointText }}</span>
+                                    </div>
+                                    <div>
+                                        <span class="fs-4">{{ specialText.title }}</span> <br>
+                                        <span class="text-secondary">{{ specialText.description }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER GO AHED -->
+        <section>
+            <div class="my-goAhedBg bg-danger">
+                <div class="my-container d-flex align-items-center h-100">
+                    <p class="h1 text-white">
+                        GO AHED AND <br> 
+                        BUILD YOUR <br>
+                        OWN PIZZA <br>
+                        WE WON'T <br>
+                        JUDGE!
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -198,5 +228,18 @@ export default {
 .my-reviewBg {
     background-image: url("../src/assets/img/h3-testimonials-bckgrnd.jpg");
     background-size: contain;
+}
+
+.my-goAhedBg{
+    height: 450px;
+    background-image: url(../assets/img/h3-background-img-duplicated.jpg);
+    background-size: 150%;
+    background-position: center;
+    background-attachment: fixed;
+    
+    .my-container{
+
+        padding: 0 10rem;
+    }
 }
 </style>
