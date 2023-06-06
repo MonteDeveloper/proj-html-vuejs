@@ -457,9 +457,9 @@ export default {
         <!-- FORM BOOK TABLE -->
         <section>
             <div class="my-form py-5 text-white">
-                <div class="my-container d-flex justify-content-center align-items-center gap-3 my-5">
+                <div class="my-container d-flex flex-wrap justify-content-center align-items-center gap-3 my-5">
                     <select class="text-secondary" name="personNumber" id="personNumberSelect">
-                        <option value="">1 Person</option>
+                        <option v-for="i in 10" value="i">{{ i }} Person{{i > 1 ? 's' : ''}}</option>
                     </select>
                     <span>FOR</span>
                     <input class="text-secondary" type="date" name="dateInput" id="dateInput">
@@ -509,11 +509,6 @@ export default {
     #timeInput::-webkit-calendar-picker-indicator {
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23bd994f" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.25 13.46l-4.24-4.24V7h1.5v3.67l3.74 3.74-1.06 1.06z" /> </svg> ');
     }
-}
-
-.my-bgStars {
-    background-image: url("../assets/img/cielostellato.PNG");
-    background-size: cover;
 }
 
 .my-hr {
