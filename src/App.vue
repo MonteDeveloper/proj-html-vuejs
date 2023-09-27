@@ -69,13 +69,13 @@ export default {
 </script>
 
 <template>
-  <PageHeader textButton="ORDER ONLINE" :middleNavList="[['HOME', '../src/assets/svg/svg-0.svg'],
+  <PageHeader textButton="ORDER ONLINE" :middleNavList="[['HOME', '/assets/svg/svg-0.svg'],
     'PAGES',
     'MENU',
     'EVENT',
     'BLOG',
-    'LANDING']" :sideNavList="[['CART', '../src/assets/svg/svg-1.svg']]"
-    logoPath="../src/assets/img/h5-logo-divided-header.png" :headerHeight="130" />
+    'LANDING']" :sideNavList="[['CART', '/assets/svg/svg-1.svg']]"
+    logoPath="/assets/img/h5-logo-divided-header.png" :headerHeight="130" />
   <PageMain />
   <PageFooter :textListCol1="footerInfo.textListCol1" :textListCol2="footerInfo.textListCol2" :textCol3="footerInfo.textCol3"/>
 </template>
