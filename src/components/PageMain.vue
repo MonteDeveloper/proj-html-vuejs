@@ -16,23 +16,23 @@ export default {
         return {
             jumboImages: [
                 [
-                    "../src/assets/img/h3-rev-img-1.png",
-                    "../src/assets/img/h3-rev-img-2.png"
+                    "../assets/img/h3-rev-img-1.png",
+                    "../assets/img/h3-rev-img-2.png"
                 ],
                 [
-                    "../src/assets/img/h3-rev-img-3.png",
-                    "../src/assets/img/h3-rev-img-4.png"
+                    "../assets/img/h3-rev-img-3.png",
+                    "../assets/img/h3-rev-img-4.png"
                 ],
                 [
-                    "../src/assets/img/h3-rev-img-5.png",
-                    "../src/assets/img/h3-rev-img-6.png"
+                    "../assets/img/h3-rev-img-5.png",
+                    "../assets/img/h3-rev-img-6.png"
                 ]
             ],
             cardViewMoreDataList: [
-                "../src/assets/img/h3-img-1.jpg",
-                "../src/assets/img/h3-img-2.jpg",
-                "../src/assets/img/h3-img-3.jpg",
-                "../src/assets/img/h3-img-4.jpg"
+                "../assets/img/h3-img-1.jpg",
+                "../assets/img/h3-img-2.jpg",
+                "../assets/img/h3-img-3.jpg",
+                "../assets/img/h3-img-4.jpg"
             ],
             reviewSliderTextList: [
                 [
@@ -164,41 +164,41 @@ export default {
             ],
             cardPersonDataList: [
                 {
-                    imgPath: "../src/assets/img/h1-team-1a-700x700.jpg",
+                    imgPath: "../assets/img/h1-team-1a-700x700.jpg",
                     name: "JANE SMITH",
                     description: "Pizza Chef"
                 },
                 {
-                    imgPath: "../src/assets/img/h1-team-2a.jpg",
+                    imgPath: "../assets/img/h1-team-2a.jpg",
                     name: "SARAH JOHNSON",
                     description: "Dough Maker"
                 },
                 {
-                    imgPath: "../src/assets/img/h1-team-4a.jpg",
+                    imgPath: "../assets/img/h1-team-4a.jpg",
                     name: "FANK BALEY",
                     description: "Kitchen Porter"
                 },
                 {
-                    imgPath: "../src/assets/img/h1-team-3a.jpg",
+                    imgPath: "../assets/img/h1-team-3a.jpg",
                     name: "EMILY JONES",
                     description: "Waitress"
                 }
             ],
             partnerLogoDataList: [
-                "../src/assets/img/h1-clients-img-1.png",
-                "../src/assets/img/h1-clients-img-2.png",
-                "../src/assets/img/h1-clients-img-3.png",
-                "../src/assets/img/h1-clients-img-4.png",
-                "../src/assets/img/h1-clients-img-5.png",
+                "../assets/img/h1-clients-img-1.png",
+                "../assets/img/h1-clients-img-2.png",
+                "../assets/img/h1-clients-img-3.png",
+                "../assets/img/h1-clients-img-4.png",
+                "../assets/img/h1-clients-img-5.png",
             ],
             cardPizzaData: {
                 imgPathList: [
-                    "../src/assets/img/h3-product-img-1a-100x100.png",
-                    "../src/assets/img/h3-product-img-2a-150x150.png",
-                    "../src/assets/img/h3-product-img-3a-150x150.png",
-                    "../src/assets/img/h3-product-img-4a-150x150.png",
-                    "../src/assets/img/h3-product-img-5a-150x150.png",
-                    "../src/assets/img/h3-product-img-6a-100x100.png",
+                    "../assets/img/h3-product-img-1a-100x100.png",
+                    "../assets/img/h3-product-img-2a-150x150.png",
+                    "../assets/img/h3-product-img-3a-150x150.png",
+                    "../assets/img/h3-product-img-4a-150x150.png",
+                    "../assets/img/h3-product-img-5a-150x150.png",
+                    "../assets/img/h3-product-img-6a-100x100.png",
                 ],
                 textList: [
                     {
@@ -322,7 +322,7 @@ export default {
         <!-- JUMBO -->
         <section>
             <SliderCarousel :offsetY="2" :dotPosition="false" style="height: 620px;" :bgAnimationDuration="50"
-                bgImage="../src/assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]"
+                bgImage="../assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]"
                 :autoplay="true" :autoplayDelay="4" :animationDuration="1" />
         </section>
 
@@ -520,7 +520,7 @@ export default {
 }
 
 .my-reviewBg {
-    background-image: url("../src/assets/img/h3-testimonials-bckgrnd.jpg");
+    background-image: url("../assets/img/h3-testimonials-bckgrnd.jpg");
     background-size: contain;
 }
 
