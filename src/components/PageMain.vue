@@ -16,23 +16,23 @@ export default {
         return {
             jumboImages: [
                 [
-                    "../assets/img/h3-rev-img-1.png",
-                    "../assets/img/h3-rev-img-2.png"
+                    "/assets/img/h3-rev-img-1.png",
+                    "/assets/img/h3-rev-img-2.png"
                 ],
                 [
-                    "../assets/img/h3-rev-img-3.png",
-                    "../assets/img/h3-rev-img-4.png"
+                    "/assets/img/h3-rev-img-3.png",
+                    "/assets/img/h3-rev-img-4.png"
                 ],
                 [
-                    "../assets/img/h3-rev-img-5.png",
-                    "../assets/img/h3-rev-img-6.png"
+                    "/assets/img/h3-rev-img-5.png",
+                    "/assets/img/h3-rev-img-6.png"
                 ]
             ],
             cardViewMoreDataList: [
-                "../assets/img/h3-img-1.jpg",
-                "../assets/img/h3-img-2.jpg",
-                "../assets/img/h3-img-3.jpg",
-                "../assets/img/h3-img-4.jpg"
+                "/assets/img/h3-img-1.jpg",
+                "/assets/img/h3-img-2.jpg",
+                "/assets/img/h3-img-3.jpg",
+                "/assets/img/h3-img-4.jpg"
             ],
             reviewSliderTextList: [
                 [
@@ -164,41 +164,41 @@ export default {
             ],
             cardPersonDataList: [
                 {
-                    imgPath: "../assets/img/h1-team-1a-700x700.jpg",
+                    imgPath: "/assets/img/h1-team-1a-700x700.jpg",
                     name: "JANE SMITH",
                     description: "Pizza Chef"
                 },
                 {
-                    imgPath: "../assets/img/h1-team-2a.jpg",
+                    imgPath: "/assets/img/h1-team-2a.jpg",
                     name: "SARAH JOHNSON",
                     description: "Dough Maker"
                 },
                 {
-                    imgPath: "../assets/img/h1-team-4a.jpg",
+                    imgPath: "/assets/img/h1-team-4a.jpg",
                     name: "FANK BALEY",
                     description: "Kitchen Porter"
                 },
                 {
-                    imgPath: "../assets/img/h1-team-3a.jpg",
+                    imgPath: "/assets/img/h1-team-3a.jpg",
                     name: "EMILY JONES",
                     description: "Waitress"
                 }
             ],
             partnerLogoDataList: [
-                "../assets/img/h1-clients-img-1.png",
-                "../assets/img/h1-clients-img-2.png",
-                "../assets/img/h1-clients-img-3.png",
-                "../assets/img/h1-clients-img-4.png",
-                "../assets/img/h1-clients-img-5.png",
+                "/assets/img/h1-clients-img-1.png",
+                "/assets/img/h1-clients-img-2.png",
+                "/assets/img/h1-clients-img-3.png",
+                "/assets/img/h1-clients-img-4.png",
+                "/assets/img/h1-clients-img-5.png",
             ],
             cardPizzaData: {
                 imgPathList: [
-                    "../assets/img/h3-product-img-1a-100x100.png",
-                    "../assets/img/h3-product-img-2a-150x150.png",
-                    "../assets/img/h3-product-img-3a-150x150.png",
-                    "../assets/img/h3-product-img-4a-150x150.png",
-                    "../assets/img/h3-product-img-5a-150x150.png",
-                    "../assets/img/h3-product-img-6a-100x100.png",
+                    "/assets/img/h3-product-img-1a-100x100.png",
+                    "/assets/img/h3-product-img-2a-150x150.png",
+                    "/assets/img/h3-product-img-3a-150x150.png",
+                    "/assets/img/h3-product-img-4a-150x150.png",
+                    "/assets/img/h3-product-img-5a-150x150.png",
+                    "/assets/img/h3-product-img-6a-100x100.png",
                 ],
                 textList: [
                     {
@@ -322,7 +322,7 @@ export default {
         <!-- JUMBO -->
         <section>
             <SliderCarousel :offsetY="2" :dotPosition="false" style="height: 620px;" :bgAnimationDuration="50"
-                bgImage="../assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]"
+                bgImage="/assets/img/cielostellato.PNG" :imagesList="jumboImages" :imagesWidth="[35, 13]"
                 :autoplay="true" :autoplayDelay="4" :animationDuration="1" />
         </section>
 
@@ -347,8 +347,8 @@ export default {
         <section>
             <div class="d-flex flex-wrap">
                 <div class="col-12 col-lg-6 position-relative overflow-hidden">
-                    <img class="h-100 w-100" src="../assets/img/h1-img-4.jpg" alt="bgImg-1">
-                    <img class="col-5 position-absolute start-50 top-50 translate-middle" src="../assets/img/h1-img-7n.png"
+                    <img class="h-100 w-100" src="/assets/img/h1-img-4.jpg" alt="bgImg-1">
+                    <img class="col-5 position-absolute start-50 top-50 translate-middle" src="/assets/img/h1-img-7n.png"
                         alt="bgImg-1">
                 </div>
                 <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center py-5">
@@ -449,7 +449,7 @@ export default {
                     </div>
                 </div>
                 <div class="col-12 col-md-6 overflow-hidden">
-                    <img class="object-fit-cover" src="../assets/img/h3-img-5a.jpg" alt="">
+                    <img class="object-fit-cover" src="/assets/img/h3-img-5a.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -474,7 +474,7 @@ export default {
 
 <style lang="scss" scoped>
 .my-form {
-    background-image: url("../assets/img/h3-background-img-3.jpg");
+    background-image: url("/assets/img/h3-background-img-3.jpg");
     background-size: cover;
 
     input,
@@ -520,7 +520,7 @@ export default {
 }
 
 .my-reviewBg {
-    background-image: url("../assets/img/h3-testimonials-bckgrnd.jpg");
+    background-image: url("/assets/img/h3-testimonials-bckgrnd.jpg");
     background-size: contain;
 }
 
@@ -530,7 +530,7 @@ export default {
 
 .my-goAhedBg {
     height: 450px;
-    background-image: url(../assets/img/h3-background-img-duplicated.jpg);
+    background-image: url(/assets/img/h3-background-img-duplicated.jpg);
     background-size: 150%;
     background-position: center;
     background-attachment: fixed;
