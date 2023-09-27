@@ -43,7 +43,7 @@ export default {
                 </div>
             </div>
         </div>
-        <img class="position-absolute top-50 start-50 translate-middle pe-none" src="../assets/img/square-pattern.png" alt="bg-img">
+        <img class="position-absolute top-50 start-50 translate-middle pe-none" src="/assets/img/square-pattern.png" alt="bg-img">
     </div>
 </template>
 

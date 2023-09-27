@@ -21,7 +21,7 @@ export default {
         <div class="my-hovered position-absolute top-50 start-50 translate-middle pe-none">
             <i class="fa-regular fa-eye fs-3 p-4 rounded-circle text-white"></i>
         </div>
-        <img class="my-hovered position-absolute top-50 start-50 translate-middle" src="../assets/img/square-pattern.png" alt="">
+        <img class="my-hovered position-absolute top-50 start-50 translate-middle" src="/assets/img/square-pattern.png" alt="">
     </div>
 </template>
 

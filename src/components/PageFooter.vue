@@ -63,11 +63,11 @@ export default {
                         Lorenzo Montello
                     </p>
 
-                    <img class="position-absolute end-0 bottom-0" src="../assets/img/footer-bottom-img.png" alt="footerLogoImg">
+                    <img class="position-absolute end-0 bottom-0" src="/assets/img/footer-bottom-img.png" alt="footerLogoImg">
                 </div>
             </div>
             <div class="col-12 col-md-6 overflow-hidden">
-                <img class="object-fit-cover" src="../assets/img/footer-img-1.jpg" alt="footerImg">
+                <img class="object-fit-cover" src="/assets/img/footer-img-1.jpg" alt="footerImg">
             </div>
         </div>
     </footer>
